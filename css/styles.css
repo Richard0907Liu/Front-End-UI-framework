@@ -1,7 +1,7 @@
 .row-header{
-    margin: 100px auto;
-    padding: 100px auto;
-    background-color: #2181db
+    margin: 0px auto;
+    padding: 0px auto;
+    /*background-color: #2181db*/
 }
 
 .row-content{
@@ -12,7 +12,7 @@
 }
   /*backgournd-color: #D1C4E9*/
 .footer{
-    background-color: rgb(233, 196, 198);
+    background-color: #D1C4E9;
     margin: 0px auto;
     padding: 20px 0px 20px 0px;
 }
