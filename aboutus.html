@@ -10,12 +10,37 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- link this file to css styles-->
-     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion: About Us</title>
-
 </head>
 
 <body>
+    <!-- navbar-dark=> background is dark, navbar-expand-sm => callopse when sm
+    bg-primary=> default background, fixed-top=> when you scoll dwon, navbar is still top of browser
+    , fixed-bottom=> at bottom of browser-->
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+        <!-- use container to specify the width -->
+        <div class="container">
+            <!-- add button to use taggle function, #Navbar=> refers to the ID that elements is contained-->
+            <button class="navbar-toggler", type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar-brand=> display some info in nav bar, # means HOMEPAGE-->
+            <a class="navbar-brand mr-auto" href="./index.html">Ristorante Con Fusion</a>
+            <!-- blew class, collapse navbar, id is the same on data-target  -->
+            <div class="collapse navbar-collapse" id="Navbar">
+                <!-- navbar=> define set of link in my nabigation bar, 
+                mr-auto=> adjust right margin, content is pushed as left as possible -->
+                <ul class="navbar-nav mr-auto">  
+                    <!-- li=> link, active=> this immediate webpage is active, and "About" is highlighted -->
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>   
+    </nav>
 
     <header class="jumbotron">
         <div class="container">
@@ -72,7 +97,7 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>

@@ -2,40 +2,44 @@
 <html lang="en">
 
 <head>
-        <!-- Required meta tags always come first -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <!-- link this file to css styles-->
-        <link rel="stylesheet" href="css/styles.css">
-    <title>Ristorante Con Fusion</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- link this file to css styles-->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>  Ristorante Con Fusion</title>
 </head>
 
 <body>
     <!-- navbar-dark=> background is dark, navbar-expand-sm => callopse when sm
-       bg-primary=> default background, fixed-top=> when you scoll dwon, navbar is still top of browser
-       , fixed-bottom=> at bottom of browser-->
+    bg-primary=> default background, fixed-top=> when you scoll dwon, navbar is still top of browser
+    , fixed-bottom=> at bottom of browser-->
     <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
         <!-- use container to specify the width -->
         <div class="container">
-           <!--1 <div class="col-12"> -->
-                <!-- navbar-brand=> display some info in nav bar, # means HOMEPAGE-->
-                <a class="navbar-brand" href="#">Ristorante CCCon Fusion</a>
-                    <!-- navbar=> define set of link in my nabigation bar, 
-                    mr-auto=> right margin, content is pushed as left as possible -->
-                    <ul class="navbar-nav mr-auto">  
-                        <!-- li=> link, active=> this immediate webpage is active, and "Home" is highlighted -->
-                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item "><a class="nav-link" href="./aboutus.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    </ul>
-            
+            <!-- add button to use taggle function, #Navbar=> refers to the ID that elements is contained-->
+            <button class="navbar-toggler", type="button" data-toggle="collapse" data-target="#N">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+            <!-- navbar-brand=> display some info in nav bar, # means HOMEPAGE-->
+            <a class="navbar-brand mr-auto" href="#">Ristorante Con Fusion</a>
+            <!-- blew class, collapse navbar, id is the same on data-target  -->
+            <div class="collapse navbar-collapse" id="N">
+                <!-- navbar=> define set of link in my nabigation bar, 
+                mr-auto=> adjust right margin, content is pushed as left as possible -->
+                <ul class="navbar-nav mr-auto">  
+                    <!-- li=> link, active=> this immediate webpage is active, and "Home" is highlighted -->
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item "><a class="nav-link" href="./aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
         </div>   
-
     </nav>
 
     <header class="jumbotron">
@@ -92,7 +96,7 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
