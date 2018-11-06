@@ -8,14 +8,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server"
   },
-  "author": "",
+  "author": "Renchao Liu",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.3.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Renchao_Liu@bitbucket.org/Renchao_Liu/confusion.git"
+  },
+  "homepage": "https://bitbucket.org/Renchao_Liu/confusion#readme"
 }
