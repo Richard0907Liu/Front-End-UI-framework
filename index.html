@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <!-- link this file to css styles-->
     <link rel="stylesheet" href="css/styles.css">
-    <title>  Ristorante Con Fusion</title>
+    <title>  Ristorante Con Fusion</title> 
 </head>
 
 <body>
@@ -29,7 +29,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button> 
             <!-- navbar-brand=> display some info in nav bar, # means HOMEPAGE, mr-auto=> adjust right margin-->
-            <a class="navbar-brand mr-auto " href="#">Ristorante Con Fusion</a>
+            <!-- <a class="navbar-brand mr-auto " href="#">Ristorante Con Fusion</a> -->
+            <!-- blow img is apt for the navbar-brand -->
+            <a class="navbar-brand mr-auto " href="#"><img src="img/logo.png" height="30" width="41"></a>
             <!-- blew class, collapse navbar, id is the same on data-target  -->
             <div class="collapse navbar-collapse" id="Navbar">
                 <!-- navbar=> define set of link in my nabigation bar, 
@@ -53,7 +55,10 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <!-- align-self-center for adding img -->
+                <div class="col-12 col-sm align-self-center">
+                        <!-- img-fluid => image will automatically adapt to the screen size -->
+                        <img src="img/logo.png" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -65,8 +70,18 @@
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
-                <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                <!-- Add an image and a media-->
+                <div class="media">
+                    <!-- d-flex => img can be used in a media object, mr-3 => margin right with 3 spaces   -->
+                    <img class="d-flex mr-3 img-thumbnail align-self-center rounded-circle" 
+                        src="img/uthappizza.png" alt="uthappizza">
+                    <!-- media-body => to add description in the media-->
+                    <div class="media-body">
+                        <!-- mt-0 => margin top is 0 -->
+                        <h2 class="mt-0">Uthappizza</h2>
+                        <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -85,9 +100,16 @@
                 <h3>Meet our Culinary Specialists</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center rounded-circle"
+                        src="img/alberto.png" alt="alberto">
+                    <div class="meida-body">
+                        <h2 class="mt-0">Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
