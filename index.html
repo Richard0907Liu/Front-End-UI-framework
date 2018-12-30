@@ -44,9 +44,61 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <!-- set a login modal at navbar-->
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span>Loginin
+                    </a>
+                </span>
             </div>
         </div>   
     </nav>
+    <!-- set a login modal-->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- create a form for email and address-->
+                        <!-- from-row=> create a row form-->
+                        <div class="form-row">
+                            <!-- form-group => in the same form-->
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" 
+                                id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1"
+                                    id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Create cancel and submit functions-->
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary 
+                                btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -56,12 +108,19 @@
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
                 <!-- align-self-center for adding img -->
-                <div class="col-12 col-sm-3 align-self-center">
+                <div class="col-12 col-sm align-self-center">
                         <!-- img-fluid => image will automatically adapt to the screen size -->
                         <img src="img/logo.png" class="img-fluid">
                 </div>
-                <div class="col-8 col-sm-3 align-self-center mt-1">
-                        <a href="#reserve_table"><button type="button" class="btn btn-sm btn-block DarkOrange"> Reserve Table</button></a>
+                <div class="col-12 col-sm align-self-center">
+                        <!-- add tooltip, data-html="true"=> tooltip content can be styled using html -->
+                        <!-- add JavaScript code to the bottom of this page to active the tooltip-->
+                        <a href="#reserve_table" role="button" 
+                            data-toggle="tooltip" data-html="true"
+                            title="Or Call us at <br><strong>+852 12345678</strong>"
+                            class="btn btn-sm btn-block DarkOrange btn-warning" 
+                            data-placement="bottom"
+                            >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -209,6 +268,14 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- add JavaScript, tooltip-->
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+        
+
 </body>
 
 </html>
