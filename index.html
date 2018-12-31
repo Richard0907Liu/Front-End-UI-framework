@@ -127,6 +127,67 @@
     </header>
 
     <div class="container">
+        <!-- add carousel-->
+        <div class="row row-content">
+            <div class="col">
+                <!-- create carousel format, slide=> display mode?, data-ride is JavaScript conponent-->
+                <!-- carousel, carousel-item=> adding function in css-->
+                <!-- slide=> give images' number automatically-->
+                <div id="mycarousel" class="carousel slide" data-ride="catousel">
+                    <!-- add carousel content-->
+                    <div class="carousel-inner" role="listbox">
+                        <!-- carousel-item=> careate a carousel block, 
+                        d-block=> a flex class that allow images to be porperly poitioned
+                        img-fluid => image can be moved-->
+                        <div class="carousel-item active">
+                            <!-- alt => names for separate content-->
+                            <img class="d-block img-fluid"
+                                src="img/uthappizza.png" alt="uthappizza">
+                            <!-- carousel-caption=> can include txt-->
+                            <div class="carousel-caption d-none d-md-block">
+                                    <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                                    <!-- d-none=> display, hidden. Made display utilities responsive-->
+                                    <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="img/buffet.png" alt="buffet">
+                            <div class="carousel-caption d-none d-md-block">
+                                    <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                                    <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="img/alberto.png" alt="alberto">
+                            <div class="carousel-caption d-none d-md-block">
+                                    <h2>Alberto Somayya</h2>
+                                    <h4>Executive Chef</h4>
+                                    <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- add manual control for carousel, ol=> ordered list-->
+                    <!-- carousel-indicators=> put indicators at bottom part-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- manually scroll the carousel using left and rigth control-->
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <!-- introduce a icon to control images-->
+                        <span class="carousel-content-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <!-- introduce a icon to control images-->
+                        <span class="carousel-content-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -142,7 +203,7 @@
                         <!-- mt-0 => margin top is 0 -->
                         <!-- badge-pill => pill shape, badge-secondary => gray -->
                         <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                        <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                     </div>
                 </div>
             </div>
@@ -156,7 +217,7 @@
                 <div class="media">
                     <div class="media-body">
                             <h2 class="mt-5">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                            <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                            <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                     </div>
                     <img class="d-flex ml-3 img-thumbnail align-self-center"
                         src="img/buffet.png" alt="buffet">
