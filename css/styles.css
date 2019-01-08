@@ -76,3 +76,10 @@ body {
     min-height: 300px;
 }
 
+.non-smoking{
+    background:green;
+}
+
+.smoking{
+    background: red;
+}
