@@ -75,11 +75,9 @@ body {
     left:0;
     min-height: 300px;
 }
-
-.non-smoking{
-    background:green;
-}
-
-.smoking{
-    background: red;
+/* this just introducing the buttons into the carousel*/
+#carouselButton{
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
 }

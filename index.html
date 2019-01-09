@@ -116,7 +116,7 @@
                 <div class="col-12 col-sm align-self-center">
                         <!-- add tooltip, data-html="true"=> tooltip content can be styled using html -->
                         <!-- add JavaScript code to the bottom of this page to active the tooltip-->
-                        <a data-toggle="modal" data-target="#loginModal2"  
+                        <a data-toggle="modal" data-target="#ReserveTable"  
                            class="btn btn-sm btn-block DarkOrange btn-warning" 
                         >Reserve Table
                         </a>
@@ -126,7 +126,7 @@
     </header>
 
     <!-- set a modal for the table reservation-->
-    <div id="loginModal2" class="modal fade" role="dialog">
+    <div id="ReserveTable" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                     <div class="modal-header">
@@ -148,26 +148,15 @@
                                 <input type="radio" name="person" value="6" > 6
                             </div>
                         </div>
-                        <!--
-                        <div class="form-group row">
-                            <label for="Section" class="col-12 col-md-3 col-form-label">Section</label>
-                                <div class="col-12 col-md-4">
-                                        <div class="btn-group mr-2" role="group" aria-label="First group">
-                                            <button class="btn non-smoking" type="button"><a class="text-light">Non-Smoking</a></button>
-                                            <button class="btn smoking" type="button"><a class="text-light">Smoking</a></button>
-                                        </div>
-                                </div>
-                        </div>
-                        -->
                         <div class="form-group row">
                             <label for="Section" class="col-12 col-md-3 col-form-label">Section </label>
                             <div class="col-12 col-md-4">
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn non-smoking active">
+                                        <label class="btn btn-success active">
                                         <input type="radio" name="options" id="option1" autocomplete="off" checked>
                                             <a class="text-light">Non-Smoking</a>
                                         </label>
-                                        <label class="btn smoking">
+                                        <label class="btn btn-danger">
                                         <input type="radio" name="options" id="option2" autocomplete="off">
                                             <a class="text-light">Smoking</a>
                                         </label>
@@ -256,6 +245,16 @@
                         <!-- introduce a icon to control images-->
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <!-- use css to put button to right coner of a carousel-->
+                    <!-- need to add JavaScript code to control action like pause, play-->
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -367,18 +366,23 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- add JavaScript for tooltip >>>
         <script>
             $(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip();
+                $('#mycarousel').carousel({interval:2000});
+                $('#carousel-pause').click(function(){
+                    $('#mycarousel').carousel('pause');
+                });
+                $('#carousel-play').click(function(){
+                    $('#mycarousel').carousel('cycle');
+                });
             });
         </script>
-        -->      
+
+
 
         
 </body>
 
 </html>
 
-
-
+ 
