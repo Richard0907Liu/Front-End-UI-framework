@@ -46,7 +46,7 @@
                 </ul>
                 <!-- set a login modal at navbar-->
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="login">
                         <!-- fa-sign-in=> a icon for sign in-->
                         <span class="fa fa-sign-in"></span>Login
                     </a>
@@ -58,11 +58,11 @@
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header ">
                     <h4 class="modal-title">Login</h4>
                     <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
+                            &times;
+                        </button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -116,7 +116,7 @@
                 <div class="col-12 col-sm align-self-center">
                         <!-- add tooltip, data-html="true"=> tooltip content can be styled using html -->
                         <!-- add JavaScript code to the bottom of this page to active the tooltip-->
-                        <a data-toggle="modal" data-target="#ReserveTable"  
+                        <a id="ReserveButton"
                            class="btn btn-sm btn-block DarkOrange btn-warning" 
                         >Reserve Table
                         </a>
@@ -135,7 +135,7 @@
                                     &times;
                             </button>
                     </div>
-                    <div class="card-body">
+                    <div class="modal-body">
                         <div class="form-group row">
                             <label for="Number of Gurest" class="col-12 col-md-3  col-form-label">Number of Guests</label>
                             <div class="col-12 col-md-8">
@@ -361,6 +361,7 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Use JavaScript to control #mycarousel etc. -->
         <script>
             $(document).ready(function(){
                 $('#mycarousel').carousel({interval:2000});
@@ -378,7 +379,17 @@
                         $('#carouselButton').children('span').addClass('fa-pause');
                     }
                 });
+
+                $("#ReserveButton").click(function(){
+                    $("#ReserveTable").modal();
+                });
+
+                $("#login").click(function(){
+                    $("#loginModal").modal();
+                });
             });
+
+
         </script>
 </body>
 
